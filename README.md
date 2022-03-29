@@ -1,6 +1,8 @@
-Youtube Video: https://youtu.be/_nLmWy__CGA
+
 
 # Sustraction_and_Resizing_python
+Youtube Video: https://youtu.be/_nLmWy__CGA
+
 The program makes a sustraction and a resizing of images, so it's easier to get the job done (when you need some of those things).
 It uses an API with neural networks, and the modules: PIL, rezising, os, request, and some other stuff, pretty easy to use.
 for creating the paths you just need to open the terminal in Linux and type "sh CreadorDePaths.bash" in the folder you wish to generate the other directories or if you have windows you can use git bash and execute the same command "sh CreadorDePaths.bash".

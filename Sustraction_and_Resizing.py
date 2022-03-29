@@ -1,9 +1,7 @@
-#%%
 #https://www.remove.bg/api#sample-code
 import requests
 import os
 import os.path
-from resize_images import resizing
 import shutil
 from PIL import Image
 
@@ -11,7 +9,7 @@ from PIL import Image
 def resizing(f,f_saved,x=80,y=80):
     """
     recibe dos rutas como parámetros, donde se encuentran las imágenes a utilizar
-    y les realiza un resizing, ya hardcodeado en 50x50 pixels
+    y les realiza un resizing, ya hardcodeado en XxY pixels
     """
     for file in os.listdir(f):
         f_img = f + "/" + file
@@ -21,9 +19,6 @@ def resizing(f,f_saved,x=80,y=80):
         f_img_save = f_img_save.strip(".jpg") + ".png" if ".jpg" in f_img_save else f_img_save
         img.save(f_img_save)
         shutil.move(r'Sin procesar' + '\\' + file,r'Ya usado y procesado' + '\\' + file )
-
-f_SP = r'path\to\Imagenes\Sin procesar'
-f_saved = r'path\to\Imagenes\Procesadas'
 
 
 
@@ -72,19 +67,16 @@ if __name__ == "__main__":
    
     try:
     
-        api_key = "" # "yhXTdWvD1oLEKsVoTWW57GvB" ya gastada
-        f_SE_SP = r'path\to\Imagenes\Sin Extraer y Sin procesar'
-        f_SP = r'path\to\Imagenes\Sin procesar'
-        f_saved = r'path\to\Imagenes\Procesadas'
+        api_key = "" 
+        f_SE_SP = r'Imagenes\Sin Extraer y Sin procesar'
+        f_SP = r'Imagenes\Sin procesar'
+        f_saved = r'Imagenes\Procesadas'
 
         extraction("conteo.txt",api_key)
 
-        resizing(f_SP,f_saved)
+        resizing(f_SP,f_saved)  
 
         
     
     except:
         raise Exception
-
-
-
